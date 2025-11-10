@@ -1,0 +1,112 @@
+# Name: Devang
+# Roll No: 23BCA101
+# Course: BCA
+# Semester: 1st
+# Subject: Problem Solving with Python
+# Assignment: Unit-1 Mini Project
+# Title: Student Profile Console App
+# Date: 10-11-2025
+
+# ---------------------------------------------
+# STUDENT PROFILE CONSOLE APP
+# ---------------------------------------------
+
+print("----------------------------------------")
+print("      WELCOME TO STUDENT PROFILE APP     ")
+print("----------------------------------------")
+print("This program collects your details and demonstrates Python basics.\n")
+
+# ---------- Task 2: Input & Variables ----------
+full_name = input("Enter your full name: ")
+roll_no = input("Enter your roll number: ")
+program = input("Enter your program (e.g., BCA): ")
+university = input("Enter your university name: ")
+city = input("Enter your city: ")
+age = int(input("Enter your age: "))
+hobby = input("Enter your hobby: ")
+
+print("\n✅ Student details recorded successfully!\n")
+
+# ---------- Task 3: Operators Demonstration ----------
+print("Let's demonstrate Python operators!\n")
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+# Arithmetic Operators
+print("\n--- Arithmetic Operators ---")
+print(f"{a} + {b} = {a + b}")
+print(f"{a} - {b} = {a - b}")
+print(f"{a} * {b} = {a * b}")
+print(f"{a} / {b} = {a / b}")
+print(f"{a} % {b} = {a % b}")
+print(f"{a} ** {b} = {a ** b}")
+print(f"{a} // {b} = {a // b}")
+
+# Assignment Operators
+print("\n--- Assignment Operators ---")
+x = a
+x += b
+print("x += b →", x)
+x -= b
+print("x -= b →", x)
+x *= b
+print("x *= b →", x)
+
+# Comparison Operators
+print("\n--- Comparison Operators ---")
+print(f"{a} == {b}: {a == b}")
+print(f"{a} != {b}: {a != b}")
+print(f"{a} > {b}: {a > b}")
+print(f"{a} < {b}: {a < b}")
+
+# Logical Operators
+print("\n--- Logical Operators ---")
+print(f"(a > 0) and (b > 0): {(a > 0) and (b > 0)}")
+print(f"(a > 0) or (b < 0): {(a > 0) or (b < 0)}")
+print(f"not(a > b): {not(a > b)}")
+
+# Identity Operators
+print("\n--- Identity Operators ---")
+print(f"a is b: {a is b}")
+print(f"a is not b: {a is not b}")
+
+# Membership Operators
+print("\n--- Membership Operators ---")
+text = "Welcome to Python Programming"
+print("'Python' in text:", "Python" in text)
+print("'Java' not in text:", "Java" not in text)
+
+# ---------- Task 4: String Operations & Formatting ----------
+print("\n--- String Operations ---")
+print("Uppercase:", full_name.upper())
+print("Lowercase:", full_name.lower())
+print("Title Case:", full_name.title())
+print("Count of 'a':", full_name.count('a'))
+print("Replaced Hobby:", hobby.replace(" ", "_"))
+print("With escape characters:\n\tName:", full_name, "\n\tCity:", city)
+
+# ---------- Task 5: Final Output - Profile Card ----------
+print("\n----------------------------------------")
+print("        STUDENT PROFILE SYSTEM          ")
+print("----------------------------------------")
+print(f"Name:           {full_name}")
+print(f"Roll No:        {roll_no}")
+print(f"Course:         {program}")
+print(f"University:     {university}")
+print(f"City:           {city}")
+print(f"Age:            {age}")
+print(f"Hobby:          {hobby}")
+print("----------------------------------------")
+print("Welcome to Python Programming!")
+print("----------------------------------------")
+
+# ---------- Task 6: Bonus Task ----------
+save_option = input("\nDo you want to save your profile? (yes/no): ").lower()
+
+if save_option == "yes":
+    with open("student_profile.txt", "w") as file:
+        file.write(f"Name: {full_name}\nRoll No: {roll_no}\nCourse: {program}\n")
+        file.write(f"University: {university}\nCity: {city}\nAge: {age}\nHobby: {hobby}\n")
+    print("✅ Profile saved to 'student_profile.txt'")
+else:
+    print("Profile not saved. Goodbye!")
